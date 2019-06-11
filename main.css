@@ -1,0 +1,38 @@
+#app {
+    font-family: "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN";
+    width: 1020px;
+}
+
+#generator-frame {
+    width: 50%;
+    min-height: 660px;
+    border: 25px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative
+}
+
+#generator-content {
+    max-height: 460px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 40px;
+    letter-spacing: 3px;
+}
+
+.vertical-content {
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+}
+
+#generator-name {
+    position: absolute;
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    left: 10px;
+    bottom: 20px;
+    font-size: 12px;
+}
