@@ -5,8 +5,7 @@ const store = {
         output: "五千兆円欲しい",
         name: "IT・20代",
         outputName: "IT<span>・</span>20代",
-        color: "#009051",
-        font: "bold sans-serif"
+        color: "#009051"
     }
 };
 
