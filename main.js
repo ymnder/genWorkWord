@@ -11,22 +11,29 @@ const store = {
 
 const methods = {
     onSave: () => {
-        html2canvas(document.querySelector("#generator-frame")).then(canvas => {
-            vm.outputImage = canvas.toDataURL();
-        });
+        setTimeout(()=> {
+            html2canvas(document.querySelector("#generator-frame")).then(canvas => {
+                vm.outputImage = canvas.toDataURL();
+            });
+        }, 1000);
     },
     onInputContent: () => {
         vm.text.output = vm.text.content.replace(/(?:\r\n|\r|\n)/g, '<br>');
+        methods.onSave();
     },
     onInputName: () => {
         vm.text.outputName = vm.text.name
                                     .replace(/[^<](\/)/g, '／')
                                     .replace(/(.)/g, '<span class="horizontal-content">$1</span>');
+        methods.onSave();
     },
 };
 
 const vm = new Vue({
     el: "#app",
     data: store,
-    methods: methods
+    methods: methods,
+    mounted: function() {
+        this.onSave();
+    }
 });
