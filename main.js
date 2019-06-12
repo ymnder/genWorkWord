@@ -15,7 +15,7 @@ const methods = {
             html2canvas(document.querySelector("#generator-frame")).then(canvas => {
                 vm.outputImage = canvas.toDataURL();
             });
-        }, 1000);
+        }, 100);
     },
     onInputContent: () => {
         vm.text.output = vm.text.content.replace(/(?:\r\n|\r|\n)/g, '<br>');

@@ -1,16 +1,27 @@
 #app {
     font-family: "游明朝", "YuMincho", "Sawarabi Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "serif";
-    width: 1020px;
+}
+
+#generator-container {
+    position: relative;
+    max-width: 600px;
+}
+#generator-container:before {
+    content:"";
+    display: block;
+    padding-top: 125%; /* 高さを幅の75%に固定 */
 }
 
 #generator-frame {
-    width: 50%;
-    min-height: 660px;
     border: 25px solid;
     display: flex;
     justify-content: center;
     align-items: center;
-    position:relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 
 #generator-content {

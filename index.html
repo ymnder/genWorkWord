@@ -48,10 +48,11 @@
             <p><img ref="outputImage" :src="outputImage" crossorigin="anonymous" style="max-width: 50%;" /></p>
         </div>
         <div>画像を作成するためのプレビュー</div>
-        <div id="generator-frame" v-bind:style="{'border-color': text.color}">
-            <div id="generator-content" v-bind:style="{'color': text.color}" v-html="text.output" class="vertical-content"></div>
-            <div id="generator-name" v-bind:style="{'color': text.color}" v-html="text.outputName"></div>
-        </div>
+        <div id="generator-container">
+            <div id="generator-frame" v-bind:style="{'border-color': text.color}">
+                <div id="generator-content" v-bind:style="{'color': text.color}" v-html="text.output" class="vertical-content"></div>
+                <div id="generator-name" v-bind:style="{'color': text.color}" v-html="text.outputName"></div>
+            </div>
         </div>
     </div>
 </body>
