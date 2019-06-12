@@ -19,21 +19,16 @@ const methods = {
     },
     onInputContent: () => {
         vm.text.output = vm.text.content.replace(/(?:\r\n|\r|\n)/g, '<br>');
-        methods.onSave();
     },
     onInputName: () => {
         vm.text.outputName = vm.text.name
                                     .replace(/[^<](\/)/g, '／')
                                     .replace(/(.)/g, '<span class="horizontal-content">$1</span>');
-        methods.onSave();
     },
 };
 
 const vm = new Vue({
     el: "#app",
     data: store,
-    methods: methods,
-    mounted: function() {
-        this.onSave();
-    }
+    methods: methods
 });
