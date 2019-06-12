@@ -4,7 +4,7 @@ const store = {
         content: "五千兆円欲しい",
         output: "五千兆円欲しい",
         name: "IT・20代",
-        outputName: "IT<span>・</span>20代",
+        outputName: "<span class='horizontal-content'>I</span><span class='horizontal-content'>T</span><span class='horizontal-content'>・</span><span class='horizontal-content'>2</span><span class='horizontal-content'>0</span><span class='horizontal-content'>代</span>",
         color: "#009051"
     }
 };
@@ -20,9 +20,8 @@ const methods = {
     },
     onInputName: () => {
         vm.text.outputName = vm.text.name
-                                    .replace(/(／)/g, '<span>$1</span>')
-                                    .replace(/(・)/g, '<span>$1</span>     ')
-                                    .replace(/[^<](\/)/g, '<span>／</span>');
+                                    .replace(/[^<](\/)/g, '／')
+                                    .replace(/(.)/g, '<span class="horizontal-content">$1</span>');
     },
 };
 

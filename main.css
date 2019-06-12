@@ -27,6 +27,13 @@
     writing-mode: vertical-rl;
 }
 
+.horizontal-content {
+    -webkit-writing-mode: horizontal-tb;
+    -ms-writing-mode: horizontal-tb;
+    writing-mode: horizontal-tb;
+    line-height: 1;
+}
+
 #generator-name {
     position: absolute;
     -webkit-writing-mode: vertical-rl;
