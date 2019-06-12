@@ -21,6 +21,24 @@
     letter-spacing: 3px;
 }
 
+_::-webkit-full-page-media, _:future, :root #generator-content {
+    height: 200px;
+}
+
+#generator-name {
+    position: absolute;
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    left: 10px;
+    bottom: 20px;
+    font-size: 12px;
+}
+
+_::-webkit-full-page-media, _:future, :root #generator-name {
+    height: 100px;
+}
+
 .vertical-content {
     -webkit-writing-mode: vertical-rl;
     -ms-writing-mode: tb-rl;
@@ -43,14 +61,4 @@
 
 .rotate-text {
     transform: matrix(0, 1, 1, 0, 0, 0);
-}
-
-#generator-name {
-    position: absolute;
-    -webkit-writing-mode: vertical-rl;
-    -ms-writing-mode: tb-rl;
-    writing-mode: vertical-rl;
-    left: 10px;
-    bottom: 20px;
-    font-size: 12px;
 }
