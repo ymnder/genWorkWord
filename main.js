@@ -20,7 +20,8 @@ const methods = {
     },
     onInputName: () => {
         vm.text.outputName = vm.text.name
-                                    .replace(/(・|／)/g, '<span>$1</span>')
+                                    .replace(/(／)/g, '<span>$1</span>')
+                                    .replace(/(・)/g, '<span>$1</span>     ')
                                     .replace(/[^<](\/)/g, '<span>／</span>');
     },
 };
